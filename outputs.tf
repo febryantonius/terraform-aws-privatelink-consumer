@@ -12,3 +12,8 @@ output "dns_names" {
   description = "List of DNS names for the VPC Endpoint include regional DNS name and zonal DNS name"
   value       = ["${aws_vpc_endpoint.service_consumer.dns_entry}"]
 }
+
+output "security_group_id" {
+  description = "The ID of vpce security group"
+  value       = "${aws_security_group.vpce_sg.id}"
+}

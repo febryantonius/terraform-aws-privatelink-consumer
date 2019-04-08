@@ -12,3 +12,8 @@ output "dns_names" {
   description = "List of DNS names for the VPC Endpoint include regional DNS name and zonal DNS name"
   value       = "${module.service-consumer.dns_names}"
 }
+
+output "security_group_id" {
+  description = "The ID of vpce security group"
+  value       = "${module.service-consumer.security_group_id}"
+}
